@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "firebase": "^9.6.2",
+    "firebaseui": "^6.0.0",
     "sirv-cli": "^1.0.0"
   }
 }
