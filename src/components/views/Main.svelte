@@ -1,11 +1,21 @@
 <script lang="ts">
   import Layout from "../templates/Layout.svelte";
   import Search from "../organisms/Search.svelte";
+  import Result from "../organisms/Result.svelte";
+  import Login from "../organisms/Login.svelte";
+  import { getCookie } from "../../utils/cookie";
+
+  const authenticated = getCookie("_u");
 </script>
 
 <wrapper>
   <Layout />
-  <Search />
+  {#if authenticated}
+    <Search />
+    <Result />
+  {:else}
+    <Login />
+  {/if}
 </wrapper>
 
 <style>

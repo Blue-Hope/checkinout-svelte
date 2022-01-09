@@ -11,5 +11,6 @@
     display: flex;
     width: 100%;
     padding: 20px;
+    padding-bottom: 0;
   }
 </style>
