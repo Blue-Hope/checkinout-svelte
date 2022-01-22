@@ -1,11 +1,16 @@
 <script lang="ts">
   import { selectedStudent } from "../../stores/student";
+  import { selectedTab } from "../../stores/tab";
+  import AlimTabContent from "../molecules/AlimTabContent.svelte";
   import Tabbar from "../molecules/Tabbar.svelte";
 </script>
 
 <wrapper>
   {#if $selectedStudent}
     <Tabbar />
+    {#if $selectedTab === "알림"}
+      <AlimTabContent />
+    {/if}
   {/if}
 </wrapper>
 

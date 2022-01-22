@@ -1,5 +1,7 @@
 import { getCookie } from "../utils/cookie";
 
+const apiUrl =
+  "https://fakmanage-default-rtdb.asia-southeast1.firebasedatabase.app";
 export interface Student {
   name: string;
   phone: string;
@@ -10,7 +12,5 @@ export interface Student {
 
 export async function getStudents() {
   const accessToken = getCookie("_u");
-  return await fetch(
-    `https://fakmanage-default-rtdb.asia-southeast1.firebasedatabase.app/students.json?access_token=${accessToken}`
-  );
+  return await fetch(`${apiUrl}/students.json?access_token=${accessToken}`);
 }
